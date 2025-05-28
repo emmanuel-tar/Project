@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Result</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 flex flex-col items-center justify-center h-screen px-4">
+  <div class="bg-white shadow-xl rounded-lg p-6 w-full max-w-sm text-center">
+    {% if item %}
+      <h2 class="text-xl font-semibold text-green-600 mb-2">Item Found</h2>
+      <p><strong>Name:</strong> {{ item[0] }}</p>
+      <p><strong>Price:</strong> ₦{{ item[1] }}</p>
+      <p><strong>In Stock:</strong> {{ item[2] }}</p>
+    {% else %}
+      <h2 class="text-xl font-semibold text-red-600 mb-2">Item Not Found</h2>
+      <p>No record found for barcode: {{ barcode }}</p>
+    {% endif %}
+    <a href="/" class="mt-4 inline-block text-blue-500 underline">Search Again</a>
+  </div>
+</body>
+</html>
