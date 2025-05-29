@@ -34,6 +34,12 @@ cur.execute(
     "INSERT INTO items (barcode, name, price, stock) VALUES (?, ?, ?, ?)",
     ("3344556677", "Mountain Dew", 3000.00, 10),
 )
+cur.execute(
+    "INSERT INTO items (barcode, name, price, stock) VALUES (?, ?, ?, ?)",
+    ("4455667788", "Cocoa Powder", 25500.00, 5),
+    
+),
+
 conn.commit()
 conn.close()
 def get_item_by_barcode(barcode):
