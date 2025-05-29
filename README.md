@@ -1,4 +1,4 @@
-```markdown
+markdown
 # 🏷️ QR Price Checker – Python + Flask + TailwindCSS
 
 A simple yet practical barcode/QR price checking web app built with **Python (Flask)** and styled using **TailwindCSS**. Users can enter or scan a barcode to fetch product information including name, price, and stock availability.
