@@ -39,6 +39,10 @@ cur.execute(
     ("4455667788", "Cocoa Powder", 25500.00, 5),
     
 )
+cur.execute(
+    "INSERT INTO items (barcode, name, price, stock) VALUES (?, ?, ?, ?)",
+    ("5566778899", "Chocolate Bar", 11500.00, 50),
+)
 def create_table():
     conn = sqlite3.connect("data.db")
     cur = conn.cursor()
@@ -83,11 +87,13 @@ def main():
         ("2233445566", "Fanta", 3500.00, 15),
         ("3344556677", "Mountain Dew", 3000.00, 10),
         ("4455667788", "Cocoa Powder", 25500.00, 5),
+        ("5566778899", "Chocolate Bar", 11500.00, 50),
     ]
     for item in items:
         insert_item(*item)
 
 if __name__ == "__main__":
+    
     main()
 conn.commit()
 conn.close()

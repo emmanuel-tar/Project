@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2 class="text-xl font-semibold mb-4">Monthly Summary</h2>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
+  <div class="bg-green-100 p-4 rounded shadow">
+    <h3 class="text-lg font-bold">Income</h3>
+    <p class="text-xl text-green-600">₦{{ summary.income }}</p>
+  </div>
+  <div class="bg-red-100 p-4 rounded shadow">
+    <h3 class="text-lg font-bold">Expenses</h3>
+    <p class="text-xl text-red-600">₦{{ summary.expense }}</p>
+  </div>
+  <div class="bg-blue-100 p-4 rounded shadow">
+    <h3 class="text-lg font-bold">Net</h3>
+    <p class="text-xl text-blue-600">₦{{ summary.net }}</p>
+  </div>
+</div>
+{% endblock %}
